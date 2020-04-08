@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <title>Document</title>
+</head>
+<body>
+    <style> 
+        #bg {
+            height: 400px;
+            background-image: linear-gradient(to bottom right, rgb(39, 39, 39), black);
+        }
+
+        #menu:hover {
+            cursor: pointer;
+        }
+    </style>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-around bg-light p-2">
+                <img id="menu" src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_work_48px-512.png" onclick="renderMenu('Experience')" width="50" height="50">
+                <img id="menu" src="https://cdn2.iconfinder.com/data/icons/maki/100/college-512.png" onclick="renderMenu('Education')" width="50" height="50">
+                <img id="menu" src="https://cdn4.iconfinder.com/data/icons/business-finance-vol-12-2/512/9-512.png" onclick="renderMenu('Contact')" width="50" height="50">
+            </div>
+        </div>
+        <div class="col-12">
+            <div id="bg" class="text-center">
+                <h1 class="pt-5 pb-2 text-white">Hello, I'm James!</h1>
+                <h3 class="pb-2 text-warning">Part-time Lecturer, Full time Programmer</h3>
+                <p class=text-white>I'm a back-end developer based in Jakarta. Have a strong interest in programming. <br> (and absolutely lecturing!)</p>
+                <button type="button" class="btn btn-light mt-4 mr-2">My Projects</button>
+                <button type="button" class="btn btn-light mt-4 ml-2">Download CV</button>
+            </div> 
+        </div>
+        <div class="col-12 col-md-6 bg-light">
+            <img src="https://image.flaticon.com/icons/png/512/15/15081.png" width="325" height="350" class="mx-auto d-block pt-3 pb-3">
+        </div>
+        <div class="col-12 col-md-6 bg-warning">
+            <h3 class="pt-5 pl-3">About Me</h3>
+            <p class="pl-3">
+            Hello! I'm James Charles. I was born in 1995. I live and work in Bandung as a Full-Time Programmer and Part-Time Lecturer. I’ve been a professional programmer for a year.
+            I’ve mostly worked professionally with Java, C, C++ and Python but also a little bit with Ruby, Perl and PHP.
+            I’ve published more than 20 articles for Indonesia programming magazines, mostly about Ruby and Python but also C++ and Java.
+            </p>
+            <p class="pl-3">
+                Beside programming I am interested in sports (running, biking, and swimming) and also interested in foreign languages and am currently putting a lot of effort into becoming fluent in Spanish. 
+                And of course it is always fun to learn something new about English (in which I am already fluent).
+            </p>
+        </div>
+    </div>
+      
+    <div style="background-image: linear-gradient(to bottom right, black,  rgb(39, 39, 39));" class="col-12" id="portfolioDtl">
+        <h3 class="text-light text-center pt-2">Experience</h3>
+        <ul class="list-group pt-2">
+            <li style="background-color: #FFC107;" class="list-group-item"><h5>[April 2019 - Dec 2019] Microsoft Singapore</h5></li>
+            <li class="list-group-item text-black">Back-End Developer</li>
+        </ul>
+        <ul class="list-group pt-2">
+            <li style="background-color: #FFC107;" class="list-group-item"><h5>[January 2020 - Present ] Bandung Institute of Technology</h5></li>
+            <li class="list-group-item text-black">Part-Time Lecturer</li>
+        </ul>
+        <ul class="list-group pt-2">
+            <li style="background-color: #FFC107;" class="list-group-item"><h5>[January 2020 - Present ] Microsoft Singapore</h5></li>
+            <li class="list-group-item text-black">Microsoft Dynamics Developer [Remote from Bandung, Indonesia]</li>
+        </ul>
+    </div>
+
+    <script>
+        const renderMenu = (menu) => {
+            if(menu == 'Experience'){
+                document.getElementById("portfolioDtl").innerHTML = `
+                <h3 class="text-light text-center pt-2">Experience</h3>
+                <ul class="list-group pt-2">
+                    <li style="background-color: #FFC107;" class="list-group-item"><h5>[April 2019 - Dec 2019] Microfost Singapore</h5></li>
+                    <li class="list-group-item text-black">Back-End Developer</li>
+                </ul>
+                <ul class="list-group pt-2">
+                    <li style="background-color: #FFC107;" class="list-group-item"><h5>[January 2020 - Present ] Bandung Institute of Technology</h5></li>
+                    <li class="list-group-item text-black">Part-Time Lecturer</li>
+                </ul>
+                <ul class="list-group pt-2">
+                    <li style="background-color: #FFC107;" class="list-group-item"><h5>[January 2020 - Present ] Microsoft Singapore</h5></li>
+                    <li class="list-group-item text-black">Microsoft Dynamics Developer [Remote from Bandung, Indonesia]</li>
+                </ul>`
+            } else if(menu == 'Education'){
+                document.getElementById("portfolioDtl").innerHTML = `
+                <h3 class="text-light text-center pt-2">Education</h3>
+                <ul class="list-group pt-2">
+                    <li style="background-color: #FFC107;" class="list-group-item"><h5>[B.Sc. IT] Bandung Institute of Technology</h5></li>
+                    <li class="list-group-item text-black">Bachelor of Science in Information Technology [Sept 2012 - August 2016]</li>
+                </ul>
+                <ul class="list-group pt-2">
+                    <li style="background-color: #FFC107;" class="list-group-item"><h5>[M.Sc. IT] Tokyo Institute of Technology</h5></li>
+                    <li class="list-group-item text-black">Master of Science in Information Technology [March 2017 - April 2019]</li>
+                </ul>`
+            } else if(menu == 'Contact'){
+                document.getElementById("portfolioDtl").innerHTML = `<h3 class="text-light text-center pt-2">Contact Me</h3>
+                <div class="d-flex justify-content-center bg-light p-2">
+                    <a href="https://www.twitter.com">
+                    <img class="m-1" alt="Twitter" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/twitter_online_social_media-512.png" width="50" height="50">
+                    <a href="https://www.instagram.com">
+                    <img class="m-1" alt="Instagram" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/instagram_online_social_media_photo-512.png" width="50" height="50">
+                    <a href="https://www.facebook.com">
+                    <img class="m-1" alt="Facebook" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_facebook-512.png"  width="50" height="50">
+                    <a href="https://www.gmail.com">
+                    <img class="m-1" alt="Gmail" src="https://cdn4.iconfinder.com/data/icons/black-white-social-media/32/mail_email_envelope_send_message-512.png"  width="50" height="50">
+                    <a href="https://www.linkedin.com">
+                    <img class="m-1" alt="Linkedin" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/linked_in_online_social_media-512.png"  width="50" height="50">
+                </div>`
+            }
+        }
+    </script>
+</body>
+</html>
